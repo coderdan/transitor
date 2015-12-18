@@ -22,14 +22,6 @@ module Transitor
       end
     end
 
-    def do_atomically
-      if defined?(ActiveRecord)
-        ActiveRecord::Base.transaction { yield }
-      else
-        yield
-      end
-    end
-
     def raise_if_guarded!
       raise TransitionError, guarded_message unless can?
     end
@@ -44,5 +36,14 @@ module Transitor
 
     def before_transition; end
     def after_transition; end
+
+    private
+      def do_atomically
+        if defined?(ActiveRecord) && object.is_a?(ActiveRecord::Base)
+          ActiveRecord::Base.transaction { yield }
+        else
+          yield
+        end
+      end
   end
 end
