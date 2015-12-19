@@ -1,6 +1,10 @@
 # Transitor
 
-TL;DR simple, PORO driven state machine for Ruby.
+[![Build Status](https://semaphoreci.com/api/v1/projects/46a7dd4c-47a2-4e39-9cfa-d9f9e7261df1/640689/badge.svg)](https://semaphoreci.com/codehire/transitor)
+[![Code Climate](https://codeclimate.com/github/coderdan/transitor/badges/gpa.svg)](https://codeclimate.com/github/coderdan/transitor)
+[![Test Coverage](https://codeclimate.com/github/coderdan/transitor/badges/coverage.svg)](https://codeclimate.com/github/coderdan/transitor/coverage)
+
+_TL;DR simple, PORO driven state machine for Ruby._
 
 Firstly, why another state machine?
 
